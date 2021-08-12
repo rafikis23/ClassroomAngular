@@ -1,0 +1,53 @@
+{
+  "workbench.colorCustomizations": {
+    "menu.background": "#FF4081",
+    "activityBarBadge.background": "#237c35",
+    "activityBar.activeBorder": "#237c35",
+    "list.activeSelectionForeground": "#FF4081",
+    "list.inactiveSelectionForeground": "#FF4081",
+    "list.highlightForeground": "#FF4081",
+    "scrollbarSlider.activeBackground": "#FF408150",
+    "editorSuggestWidget.highlightForeground": "#FF4081",
+    "textLink.foreground": "#FF4081",
+    "progressBar.background": "#FF4081",
+    "pickerGroup.foreground": "#FF4081",
+    "notificationLink.foreground": "#FF4081",
+    "editorWidget.resizeBorder": "#FF4081",
+    "editorWidget.border": "#FF4081",
+    "settings.modifiedItemIndicator": "#FF4081",
+    "settings.headerForeground": "#FF4081",
+    "panelTitle.activeBorder": "#FF4081",
+    "breadcrumb.activeSelectionForeground": "#FF4081",
+    "menu.selectionForeground": "#FF4081",
+    "menubar.selectionForeground": "#FF4081",
+    "editor.findMatchBorder": "#FF4081",
+    "selection.background": "#FF408140",
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [
+        {
+          "scope": "string",
+          "settings": {
+            "fontStyle": "italic",
+            "foreground": "#FF4081"
+          }
+        }
+      ]
+    },
+    "editorSuggestWidget.selectedBackground": "#c5134f",
+    "editor.selectionBackground": "#ac0039",
+    "editor.selectionHighlightBackground": "#ac0039",
+    "activityBar.background": "#4e2116",
+    "titleBar.activeBackground": "#26100b",
+    "titleBar.activeForeground": "#e7e7e7",
+    "activityBar.activeBackground": "#4e2116",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "statusBar.background": "#26100b",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#4e2116",
+    "titleBar.inactiveBackground": "#26100b99",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#26100b"
+}
