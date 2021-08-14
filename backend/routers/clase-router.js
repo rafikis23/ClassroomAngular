@@ -189,4 +189,42 @@ router.post('/:idClase/anuncios/:idAnuncio/nuevoComentario', function(req, res){
     });
     
 });
+
+//• Listar participantes de la clase seleccionada
+router.get('/:idClase/listaParticipantes', function(req, res){
+    clase.aggregate([
+        {
+            $lookup:{
+                from: "participantes",
+                localField: "_id",
+                foreignField: "clases._id",
+                as: "participantes"
+            }
+        },
+        {
+            $match:{
+                 _id:mongoose.Types.ObjectId(req.params.idClase)
+            }
+        },
+        {
+            $project:{
+                "_id": true,
+                "nombreClase":true,
+                "participantes._id":true,
+                "participantes.nombre":true,
+                "participantes.imagen":true
+               
+            }
+        }
+    ])
+    .then(result=>{
+        res.send(result[0]);
+        res.end();
+    })
+    .catch(error=>{
+        res.send(error);
+        res.end();
+    })
+});
+
 module.exports = router;

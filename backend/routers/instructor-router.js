@@ -91,5 +91,25 @@ router.get('/:idInstructor/miniaturaClases', function(req, res){
         res.end();
     })
 });
+// Agregar un nuevo instructor
+router.post('/instructor', function(req, res){
+    let c = new instructor({
+        _id: mongoose.Types.ObjectId(),
+        usuario: req.body.usuario,
+        password: req.body.password,
+        nombre:req.body.nombre,
+        imagen:req.body.imagen,
+        clases:[]
+    });
+    c.save()
+        .then(data=>{
+            res.send(data);
+            res.end();
+        })
+        .catch(error=>{
+            res.send(error);
+            res.end();
+        })
+});
 
 module.exports = router;

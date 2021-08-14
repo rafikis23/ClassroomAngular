@@ -1,0 +1,12 @@
+Visualizar el listado de instructores y al dar click listar las clases correspondientes a dicho instructor (esquina superior
+derecha)
+• Visualizar lista de miniaturas de las clases (se muestran al dar click en el botón del menú de la izquierda)
+• Visualizar el detalle de una clase (Al dar click en una clase en particular)
+• Visualizar los anuncios de una clase
+• Visualizar los comentarios de un anuncio
+• Agregar un nuevo comentario
+• Listar asignaciones de la clase seleccionada
+• Listar participantes de la clase seleccionada
+• Agregar estudiante
+• Agregar instructor
+

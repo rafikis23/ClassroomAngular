@@ -3,8 +3,23 @@ var router = express.Router();
 var participante = require('../models/participante');
 var mongoose = require('mongoose');
 
-//• Listar participantes de la clase seleccionada
-router.get('/', function(req, res){
-    participante.find({},{})
-})
+// Agregar un nuevo participante
+router.post('/participante', function(req, res){
+    let c = new participante({
+        _id: mongoose.Types.ObjectId(),
+        nombre: req.body.nombre,
+        imagen: req.body.imagen,
+        "clases._id":req.body.idClase,
+        "clases.nombreClase":req.body.nombreClase
+    });
+    c.save()
+        .then(data=>{
+            res.send(data);
+            res.end();
+        })
+        .catch(error=>{
+            res.send(error);
+            res.end();
+        })
+});
 module.exports = router;

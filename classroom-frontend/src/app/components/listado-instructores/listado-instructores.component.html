@@ -1,0 +1,50 @@
+<!-- Area colapsable de los instructores -->
+<section>
+<div class="collapse bg-light" id="navbarInstructors" style="display: block;" >
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Miniaturas de clases -->
+        <div class="col-4 py-4"></div>
+        <div class="col-8 py-4 d-flex" style="justify-content: flex-end;">
+          <img *ngFor="let instructor of instructores" src="assets/img/profile-pics/{{instructor.imagen}}" class="rounded-circle pp-small btn-circle" (click)="instructorSeleccionado(instructor)">
+          <!-- <img src="assets/img/profile-pics/vegeta.jpg" class="rounded-circle pp-small btn-circle">
+          <img src="assets/img/profile-pics/krilin.jpg" class="rounded-circle pp-small btn-circle">
+          <img src="assets/img/profile-pics/patricio.jpg" class="rounded-circle pp-small btn-circle">
+          <img src="assets/img/profile-pics/bulma.jpg" class="rounded-circle pp-small btn-circle"> -->
+          <img src="assets/img/icons/add.png" class="rounded-circle pp-small btn-circle" (click)="abrirModal(contentInstructor)" title="Nuevo instructor">
+        </div>
+        <hr class="mb-0">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!--Modal Nuevo Instructor-->
+  <ng-template #contentInstructor let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Nuevo Instructor</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-12">
+          <form id="form-app">
+            <input [(ngModel)]="usuarioInstructor" class="form-control" type="text" name="nombre" id="usuario" placeholder="Usuario">
+            <br>
+            <input [(ngModel)]="passwordInstructor"  class="form-control" type="password" name="imagen" id="password" placeholder="Contraseña">
+            <br>
+            <input [(ngModel)]="nombreInstructor" class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre">
+            <br>
+            <input [(ngModel)]="ImagenInstructor"  class="form-control" type="text" name="imagen" id="imagen" placeholder="Imagen">
+            <br>
+        </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="modal.close('Close click')">Cerrar</button>
+          <button type="button" class="btn btn-primary" (click)="guardarInstructor()">Guardar</button>
+    </div>
+  </ng-template>
